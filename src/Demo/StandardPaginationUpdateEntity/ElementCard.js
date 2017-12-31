@@ -33,7 +33,7 @@ class ElementCard extends Component {
   render() {
     return (
       <StyledCard>
-        ElementCard id: {this.props.id} examData: {this.props.examData} <span onClick={this.onUpdate}>Update</span>
+        ElementCard id: {this.props.id} examData: {this.props.examData} <button onClick={this.onUpdate}>Update</button>
         {this.props.isUpdating && ' isUpdating'}
         {this.props.isUpdatingSuccess && ' success'}
         {this.props.isUpdatingFailure && ' failed'}

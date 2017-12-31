@@ -1,7 +1,6 @@
 class ExaminationsSource {
   constructor(name) {
     this.generateExaminations();
-    this._counter = 0;
   }
 
   generateExaminations() {
@@ -29,17 +28,6 @@ class ExaminationsSource {
 
     const elementsWithPhraseCount = elementsWithPhrase.length;
     const pageElements = elementsWithPhrase.slice(pageFromZero * pageLength, pageFromZero * pageLength + pageLength);
-
-    console.log('counter: ' + this._counter);
-    this._counter++;
-    if(this._counter === 3){
-      console.log('zmieniony counter');
-      const modified = elementsWithPhraseCount -1;
-      return {
-        totalElements: modified,
-        elements: pageElements
-      };
-    }
 
     return {
       totalElements: elementsWithPhraseCount,
