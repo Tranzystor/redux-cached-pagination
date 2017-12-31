@@ -1,11 +1,13 @@
-##redux-cached-pagination
+# redux-cached-pagination
 redux-cached-pagination simplify pagination in react-redux applications
  
-#Installation 
+## Installation 
 
+```
 npm install redux-cached-pagination
+```
 
-#Features:
+## Features:
 
 redux-cached-pagination is a set of action creators and reducers to easily improve quality of pagination in your react-redux application. 
 Simple configuration gives you possibility to achieve advanced pagination features:  
@@ -18,14 +20,19 @@ Simple configuration gives you possibility to achieve advanced pagination featur
 * storing last visited page and used filters
 Demo page implements all above features.
 
-#Demo 
-Demo is available at www.www
-To run demo locally run: npm run start
+## Demo 
+Demo is available at www
+To run demo locally run: 
+```
+npm run start
+```
 
-#Usage:
+## Usage:
+
 redux-cached-pagination depends on redux and redux-thunk. You should look at the Demo folder before trying to use this.
 In order to use redux-cached-pagination you have to implement fetching method with signature like that:
 
+```
 const callExaminationsApi = (page, requestParams) => {
   const { searchPhrase } = requestParams;
   return new Promise((resolve, reject) => {
@@ -36,6 +43,7 @@ const callExaminationsApi = (page, requestParams) => {
     }, 1500);
   });
 };
+```
 
 page - number of required page
 requestParams - fully customizable search parameters
@@ -56,12 +64,14 @@ In order to create paginator use 'createPaginator' method with arguments:
 * searchParamsInitState - default request params stored in reducer
 
 Default pagination config looks the same as:
+```
 const config = {
     refreshResultInBackground: true,
     timeToRefresh: 5000,
     searchHistoryLength: 5,
     elementsPerPage: 30,
 };
+```
 
 * refreshResultInBackground - on/off refreshing search results in background
 * timeToRefresh - if search result is older than given time and user call the same page again it would be refreshed
@@ -70,14 +80,17 @@ const config = {
 
 redux-cached-pagination provides reducers so it's required to connect with redux store:
 
+```
 import { paginationReducers, paginationStoreName } from './paginationConfig';
 const rootReducer = combineReducers({
     [paginationStoreName]: paginationReducers
 }); 
+```
 
 created paginator instance provides set of selectors which help you to use redux-cached-pagination in several use cases.
 
-#API
+## API
+
 Paginator instance provides:
 * requestPage(page, searchParams) - the most important function which executes pagination logic. call this method when page in cache is/will be needed. 
 Page param is a number of required page. searchParams is object which would be passed to fetching method and used to store data in cache. Used in standard 
@@ -94,15 +107,19 @@ pagination case only.
 * getPage - selector provides page content by given page number. If page doesn't exist, it returns null and doesn't fetch page.
 
 
-#Standard pagination demo:
+## Standard pagination demo:
+
 At first glance this is extremely simple feature but navigation back to the previous page doesn't call fetching method so content is displayed immediately.
 It's possible to refresh data in background. Search list state is stored in redux so navigation doesn't clean search phrase and selected page.
 
-#Standard pagination with entity update
+## Standard pagination with entity update
+
 The same example as above but custom reducer is provided. This kind of solution allows to add own actions on entities like updating single entity.  
 
-#Virtualized pagination:
+## Virtualized pagination:
+
 Additional layer to react-virtualized list control. 
 
-#License 
+## License 
+
 redux-cached-pagination is available under MIT License.
