@@ -21,8 +21,8 @@ Simple configuration gives you possibility to achieve advanced pagination featur
 Demo page implements all above features.
 
 ## Demo 
-Demo is available at www
-To run demo locally run: 
+Demo is available at [DEMO](https://tranzystor.github.io/redux-cached-pagination/)
+To run demo locally: 
 ```
 npm run start
 ```
