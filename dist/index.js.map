@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/pagination-lib/index.js"],"names":["createPaginator","VirtualList"],"mappings":";;;;;;;AAAA;;AACA;;;;;;QAESA,e;QAAiBC,W","file":"index.js","sourcesContent":["import { createPaginator } from './createPaginator';\r\nimport VirtualList from './VirtualizedListWrapper/VirtualList';\r\n\r\nexport { createPaginator, VirtualList };\r\n"]}
