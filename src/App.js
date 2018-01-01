@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Provider } from 'react-redux';
 import { store } from './store';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import styled from 'styled-components';
 import TwoRowsLayout from './Demo/PageLayout/TwoRowsLayout';
 import Header from './Demo/PageLayout/Header';
