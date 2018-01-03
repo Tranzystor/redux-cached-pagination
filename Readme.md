@@ -106,7 +106,7 @@ pagination case only.
 * ```getPaginationParams```, ```updatePaginationParams``` - redux slice used to store another parameters connected with pagination. It's a place to store custom data. In DEMO application (virtual case) this method is used to store selected row index.
 
 * ```getTotalElements``` - selector provides total elements count for current search params.
-* ```etPage``` - selector provides page content by given page number. If page doesn't exist, it returns null and doesn't fetch page.
+* ```getPage``` - selector provides page content by given page number. If page doesn't exist, it returns null and doesn't fetch page.
 
 
 ## Standard pagination demo
