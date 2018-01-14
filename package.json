@@ -7,21 +7,32 @@
     "type": "git",
     "url": "https://github.com/Tranzystor/redux-cached-pagination"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "dependencies": {
     "dot-prop-immutable": "^1.4.0",
     "react-virtualized": "^9.15.0",
-    "styled-components": "^2.4.0"   
+    "styled-components": "^2.4.0"
   },
-  "peerDependencies": {
-
-  },
+  "keywords": [
+    "pagination",
+    "react",
+    "reactjs",
+    "list",
+    "page",
+    "virtualized",
+    "refresh",
+    "redux",
+    "normalizr",
+    "cache",
+    "cached",
+    "virtual",
+    "scrolling"
+  ],
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "prepublish": "babel ./src/pagination-lib --out-dir ./dist --source-maps --presets es2015,stage-0,react",
+    "prepublish":
+      "babel ./src/pagination-lib --out-dir ./dist --source-maps --presets es2015,stage-0,react",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
